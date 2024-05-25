@@ -7,17 +7,27 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LocalLogReceiver implements ILogReceiver {
-    // TODO Настроить этот логгер на запись в файл
     private static final Logger log = LoggerFactory.getLogger(LocalLogReceiver.class);
+    private static final String CLIENT_SENDER = "client";
 
     @Override
     public boolean logMsg(ReceivedMessage message, String receiver) {
-        log.info("Logged message, tm: {}, message: {}", System.currentTimeMillis(), message);
+        logJson(MsgType.MSG, CLIENT_SENDER, receiver, message);
         return true;
     }
 
     @Override
     public void logPush(ReceivedMessage message, String sender, String receiver) {
-        log.info("Logged push, tm: {}, sender: {}, receiver: {}, message: {}", System.currentTimeMillis(), sender, receiver, message);
+        logJson(MsgType.PUSH, sender, receiver, message);
+    }
+
+    private void logJson(MsgType msgType, String sender, String receiver, ReceivedMessage message) {
+        log.info("{ \"type\": \"{}\", \"tm\": {}, \"sender\": \"{}\", \"receiver\": \"{}\", \"message\": {} }",
+            msgType, System.currentTimeMillis(), sender, receiver, message);
+    }
+
+    private enum MsgType {
+        MSG,
+        PUSH
     }
 }

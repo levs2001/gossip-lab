@@ -1,33 +1,36 @@
 package leo.worker.client;
 
-import leo.worker.IGossipWorkerService;
-import leo.worker.domain.ReceivedMessage;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.support.WebClientAdapter;
-import org.springframework.web.service.invoker.HttpServiceProxyFactory;
+import static leo.worker.GossipWorkerController.PUSH_M;
 
-public class GossipWorkerClient implements IGossipWorkerService {
-    private final IGossipWorkerService client;
+import leo.worker.domain.ReceivedMessage;
+import org.springframework.http.MediaType;
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
+public class GossipWorkerClient implements IGossipWorkerClient {
+    private static final String SENDER_P = "sender";
+
+    private final WebClient client;
 
     public GossipWorkerClient(String host) {
-        WebClient webClient = WebClient.builder()
+        this.client = WebClient.builder()
             .baseUrl(host)
             .build();
-        HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory
-            .builder(WebClientAdapter.forClient(webClient))
-            .build();
-
-        this.client = httpServiceProxyFactory.createClient(IGossipWorkerService.class);
     }
 
     @Override
-    public ResponseEntity<String> message(String message, int infectionCount) {
-        return client.message(message, infectionCount);
-    }
-
-    @Override
-    public ResponseEntity<String> push(ReceivedMessage msg, String sender) {
-        return client.push(msg, sender);
+    public Mono<String> push(ReceivedMessage msg, String sender) {
+        return client.post()
+            .uri(
+                uriBuilder -> uriBuilder
+                    .path(PUSH_M)
+                    .queryParam(SENDER_P, sender)
+                    .build()
+            )
+            .bodyValue(msg)
+            .accept(MediaType.ALL)
+            .retrieve()
+            .bodyToMono(String.class);
     }
 }

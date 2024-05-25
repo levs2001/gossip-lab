@@ -7,6 +7,6 @@ public record ReceivedMessage(String hash, String message, int infectionCount) {
 
     @Override
     public String toString() {
-        return String.format("hash: {%s}, message: {%s}, infectionCount: {%d}", hash, message, infectionCount);
+        return String.format("{ \"hash\": \"%s\", \"message\": \"%s\", \"infectionCount\": %d }", hash, message, infectionCount);
     }
 }
