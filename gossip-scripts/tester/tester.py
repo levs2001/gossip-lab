@@ -2,11 +2,10 @@ import os
 import time
 import json
 import requests
-import coloredlogs, logging
+import logging
 import shutil
 import subprocess
 
-coloredlogs.install(level='INFO')
 log = logging.getLogger('Tester')
 log.setLevel(logging.INFO)
 
@@ -19,7 +18,7 @@ class Composer:
         subprocess.Popen(f'docker-compose -f {self.compose_file} up', shell=True)
 
     def compose_down(self):
-        subprocess.Popen(f'docker-compose -f {self.compose_file} down', shell=True)
+        subprocess.call(f'docker-compose -f {self.compose_file} down', shell=True)
 
 
 # Use for absolute time not for delta
@@ -36,7 +35,7 @@ class Tester:
     request_timeout: float = 1.5
 
     def __init__(self, cluster_dir: str, msg_receiver_url, inf_count, msg_count, warm_up_count=100,
-                 remove_old_logs=False):
+                 remove_old_logs=True):
         self.volumes_path = cluster_dir + '/volumes'
         self.cluster_dir = cluster_dir
         self.composer = Composer(cluster_dir + '/docker-compose.yml')
@@ -47,17 +46,16 @@ class Tester:
         self.remove_old_logs = remove_old_logs
 
         self.test_params = {}
+        self._write_param('inf_count', inf_count)
+        self._write_param('msg_count', msg_count)
+        self._write_param('warm_up_count', warm_up_count)
 
     def make_test(self):
-        if not self._cluster_up():
-            log.error('Cant raise cluster.')
-            return
         self._warm_up()
         self._make_test()
         self._save_params()
-        self._cluster_down()
 
-    def _cluster_up(self):
+    def cluster_up(self):
         # Чистим volumes_path, чтобы затереть старые логи
         if os.path.exists(self.volumes_path) and self.remove_old_logs:
             log.info(f'Removing old cluster volumes {self.volumes_path}')
@@ -85,7 +83,7 @@ class Tester:
         log.error('No answer from cluster')
         return False
 
-    def _cluster_down(self):
+    def cluster_down(self):
         self.composer.compose_down()
         log.info("Cluster switched off.")
 

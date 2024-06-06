@@ -1,10 +1,13 @@
+import logging
 import os
+from typing import Dict
+
+log = logging.getLogger('Tester')
+log.setLevel(logging.INFO)
 
 
 class ClusterMaker:
-    # TODO: Реализовать package_loss
-    # TODO: add network in yml
-    def __init__(self, open_ports: dict[int, int], image='leo-gossip-worker:0.0.1', internal_port=8080, package_loss=0,
+    def __init__(self, open_ports: Dict[int, int], image='leo-gossip-worker:0.0.1', internal_port=8080, package_loss=0,
                  containers_count=100, config_path='./cluster',
                  volumes_path='./volumes', limit_mem='256M', reserve_mem='128M'):
         self.image = image
@@ -19,8 +22,8 @@ class ClusterMaker:
         self.open_ports = open_ports
 
     def save_compose(self):
-        filename = (f"{self.config_path}/containers_count_{self.containers_count}/package_loss_{self.package_loss}"
-                    f"/docker-compose.yml")
+        cluster_dir = self.get_cluster_dir()
+        filename = (cluster_dir + "/docker-compose.yml")
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         hosts = [self._host(port) for port in self._num_range()]
         with open(filename, 'w') as f:
@@ -31,6 +34,11 @@ class ClusterMaker:
                 f.write(self._service_yml(num, hosts, open_port))
 
             f.write(self._footer_yml())
+
+        return cluster_dir
+
+    def get_cluster_dir(self):
+        return f"{self.config_path}/containers_count_{self.containers_count}/package_loss_{self.package_loss}"
 
     def _header_yml(self):
         return f"""# Gossip Cluster, containers_count: {self.containers_count}, package_loss: {self.package_loss} 
@@ -64,6 +72,7 @@ networks:
     environment:
       - CLUSTER_OWN_HOST={self._host(num)}
       - CLUSTER_HOSTS={hosts_str}
+      - NETWORK_PACKAGE_LOSS={self.package_loss}
     deploy:
       resources:
         limits:

@@ -1,0 +1,402 @@
+[
+  {
+    "inf_count": 3,
+    "package_loss_perc": 0,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 12223.16,
+    "mean_send_ms": 3569.7207235723417,
+    "infected_perc": 40.68,
+    "duplicate_perc": 24.72242783123612
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 0,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 10881.731958762886,
+    "mean_send_ms": 1496.6679647664248,
+    "infected_perc": 71.84,
+    "duplicate_perc": 45.3189222103821
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 0,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 2540.67,
+    "mean_send_ms": 158.29804631816754,
+    "infected_perc": 87.53999999999999,
+    "duplicate_perc": 59.72209441428177
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 0,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 938.64,
+    "mean_send_ms": 79.7922630757662,
+    "infected_perc": 94.08,
+    "duplicate_perc": 68.1861220073042
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 10,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 10128.252631578947,
+    "mean_send_ms": 3518.77134528893,
+    "infected_perc": 35.32,
+    "duplicate_perc": 25.57943531394859
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 10,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 10786.51,
+    "mean_send_ms": 1509.2874698743858,
+    "infected_perc": 66.12,
+    "duplicate_perc": 41.672547635850385
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 10,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 4875.949494949495,
+    "mean_send_ms": 595.3425259715166,
+    "infected_perc": 80.64,
+    "duplicate_perc": 54.645669291338585
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 10,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 2220.01,
+    "mean_send_ms": 147.2741421847765,
+    "infected_perc": 91.82000000000001,
+    "duplicate_perc": 64.61657032755299
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 20,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 10248.1875,
+    "mean_send_ms": 3637.2283147129056,
+    "infected_perc": 30.44,
+    "duplicate_perc": 21.868583162217657
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 20,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 12137.887755102041,
+    "mean_send_ms": 2131.688320144885,
+    "infected_perc": 54.98,
+    "duplicate_perc": 34.297323135755256
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 20,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 4954.02,
+    "mean_send_ms": 400.86392072865294,
+    "infected_perc": 76.64,
+    "duplicate_perc": 51.21578612348823
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 20,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 1665.14,
+    "mean_send_ms": 137.60728042150467,
+    "infected_perc": 88.14,
+    "duplicate_perc": 61.06890459363957
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 30,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 6884.0204081632655,
+    "mean_send_ms": 2474.219350762071,
+    "infected_perc": 27.200000000000003,
+    "duplicate_perc": 20.792079207920793
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 30,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 14804.111111111111,
+    "mean_send_ms": 3529.9651766514635,
+    "infected_perc": 41.72,
+    "duplicate_perc": 28.068965517241377
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 30,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 7717.383838383838,
+    "mean_send_ms": 1001.9006348727924,
+    "infected_perc": 68.4,
+    "duplicate_perc": 43.480416460089245
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 30,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 2558.25,
+    "mean_send_ms": 218.14303774268475,
+    "infected_perc": 82.92,
+    "duplicate_perc": 54.629021667761
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 40,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 5969.085106382979,
+    "mean_send_ms": 2328.414816425877,
+    "infected_perc": 25.72,
+    "duplicate_perc": 18.915510718789406
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 40,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 14560.876288659794,
+    "mean_send_ms": 3871.3322977833427,
+    "infected_perc": 34.98,
+    "duplicate_perc": 22.058823529411764
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 40,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 8955.12,
+    "mean_send_ms": 1301.8288944124563,
+    "infected_perc": 52.2,
+    "duplicate_perc": 34.12417970721858
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 40,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 4501.62,
+    "mean_send_ms": 356.89540982587766,
+    "infected_perc": 74.5,
+    "duplicate_perc": 45.38923911449934
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 50,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 3577.845238095238,
+    "mean_send_ms": 1571.0252166187088,
+    "infected_perc": 18.240000000000002,
+    "duplicate_perc": 17.985611510791365
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 50,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 13105.98947368421,
+    "mean_send_ms": 3797.9278940438453,
+    "infected_perc": 26.0,
+    "duplicate_perc": 20.683343502135447
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 50,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 12718.510416666666,
+    "mean_send_ms": 3009.098444272835,
+    "infected_perc": 38.04,
+    "duplicate_perc": 25.84795321637427
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 50,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 8066.545454545455,
+    "mean_send_ms": 986.3502404724513,
+    "infected_perc": 57.879999999999995,
+    "duplicate_perc": 37.52158894645941
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 60,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 2320.7625,
+    "mean_send_ms": 989.1121384394908,
+    "infected_perc": 14.42,
+    "duplicate_perc": 13.75598086124402
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 60,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 11256.182795698925,
+    "mean_send_ms": 3781.4696985394107,
+    "infected_perc": 19.84,
+    "duplicate_perc": 15.574468085106382
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 60,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 12293.123711340206,
+    "mean_send_ms": 3706.869451363421,
+    "infected_perc": 25.1,
+    "duplicate_perc": 16.666666666666664
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 60,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 9982.53,
+    "mean_send_ms": 1848.8417554539383,
+    "infected_perc": 37.28,
+    "duplicate_perc": 26.614173228346456
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 70,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 1246.1803278688524,
+    "mean_send_ms": 847.124040943759,
+    "infected_perc": 9.58,
+    "duplicate_perc": 9.792843691148775
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 70,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 6855.74025974026,
+    "mean_send_ms": 2262.131146700578,
+    "infected_perc": 15.22,
+    "duplicate_perc": 11.921296296296296
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 70,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 8445.544444444444,
+    "mean_send_ms": 2368.4725268371185,
+    "infected_perc": 17.96,
+    "duplicate_perc": 12.645914396887159
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 70,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 8015.159574468085,
+    "mean_send_ms": 2154.9041306103227,
+    "infected_perc": 23.64,
+    "duplicate_perc": 17.11079943899018
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 80,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 901.3333333333334,
+    "mean_send_ms": 452.00589869281055,
+    "infected_perc": 5.24,
+    "duplicate_perc": 2.9629629629629632
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 80,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 1583.2533333333333,
+    "mean_send_ms": 823.0126363562551,
+    "infected_perc": 9.98,
+    "duplicate_perc": 9.107468123861565
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 80,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 5375.493670886076,
+    "mean_send_ms": 2140.6734090896693,
+    "infected_perc": 11.62,
+    "duplicate_perc": 9.360374414976599
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 80,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 5486.0375,
+    "mean_send_ms": 2013.5681509289323,
+    "infected_perc": 12.18,
+    "duplicate_perc": 7.866868381240545
+  },
+  {
+    "inf_count": 3,
+    "package_loss_perc": 90,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 4437.793103448276,
+    "mean_send_ms": 1728.680459770115,
+    "infected_perc": 3.38,
+    "duplicate_perc": 0.0
+  },
+  {
+    "inf_count": 5,
+    "package_loss_perc": 90,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 770.8787878787879,
+    "mean_send_ms": 376.9282828282828,
+    "infected_perc": 3.62,
+    "duplicate_perc": 1.092896174863388
+  },
+  {
+    "inf_count": 7,
+    "package_loss_perc": 90,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 899.6610169491526,
+    "mean_send_ms": 467.2878161018545,
+    "infected_perc": 6.12,
+    "duplicate_perc": 4.375
+  },
+  {
+    "inf_count": 9,
+    "package_loss_perc": 90,
+    "containers_count": 50,
+    "msg_count": 100,
+    "max_send_ms": 1688.4615384615386,
+    "mean_send_ms": 618.6107881007882,
+    "infected_perc": 6.32,
+    "duplicate_perc": 3.3639143730886847
+  }
+]
